@@ -1,10 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//List Barang sesuai kode
 void barang();
-
+//Function untuk kembalian belanja
 int kembalian();
-
+//Function utama
 int main ()
 {
     char ulangi = 'n';
