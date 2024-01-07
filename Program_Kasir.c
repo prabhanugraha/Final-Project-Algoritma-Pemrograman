@@ -1,11 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<conio.h>
-#include<string.h>
 
 void barang();
 
-float kembalian();
+int kembalian();
 
 int main ()
 {
@@ -18,6 +16,7 @@ int main ()
         printf("Lihat Kode Barang ? (y/n) : ");
         scanf("%s",&ulangi);
 
+        //Meminta User apakah ingin melihat List Barang
         if (ulangi == 'y')
         {
             barang();
@@ -142,6 +141,7 @@ int main ()
                 }
 
             }
+            //Ketika User menginput kode diluar list
             else
             {
                 printf("\nMaaf kode tidak valid");
@@ -178,7 +178,7 @@ int main ()
             scanf("%d",&uangmu);
         }
         
-        printf("\nKembalian = Rp %2.f\n\n",kembalian(tb,uangmu));
+        printf("\nKembalian = Rp %d\n\n",kembalian(tb,uangmu));
 
         printf("===============================================================\n");
         printf("\t\tTERIMA KASIH SUDAH BERBELANJA\n");
@@ -243,9 +243,9 @@ void barang()
 }
 
 //function untuk kembalian
-float kembalian(int tb,int uangmu) 
+int kembalian(int tb,int uangmu) 
 {
-    float kembali;
+    int kembali;
     kembali = uangmu-tb;
 
     return kembali;
